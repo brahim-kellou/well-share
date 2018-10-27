@@ -51,63 +51,74 @@ class HomeScreen extends Component {
                   size={24}
                   color={colors.thirdColor}
                 />
+                <View style={styles.smallCircle}>
+
+                </View>
               </TouchableOpacity>
             </View>
           </View>
+          <Image
+            source={require('../assets/tree.png')}
+            style={styles.treeImage}
+          >
+            
+          </Image>
           <View style={styles.treeFamilyContainer}>
             <MembrePhoto
-              src={require('../assets/profile.png')}
+              initActif={false}
+              src={require('../assets/grand-father.png')}
               style={{
                 position: 'absolute',
-                top: 40,
+                top: 70,
                 left: 190,
               }}
             />
             <MembrePhoto
-              src={require('../assets/profile.png')}
+              initActif={true}
+              src={require('../assets/mother.jpg')}
               style={{
                 position: 'absolute',
-                top: 150,
+                top: 180,
                 left: 100,
               }}
             />
             <MembrePhoto
-              src={require('../assets/profile.png')}
+              src={require('../assets/father.png')}
               style={{
                 position: 'absolute',
-                top: 150,
+                top: 180,
                 left: 190,
               }}
             />
             <MembrePhoto
-              src={require('../assets/profile.png')}
+              src={require('../assets/son1.png')}
               style={{
                 position: 'absolute',
-                top: 260,
+                top: 290,
                 left: 10,
               }}
             />
             <MembrePhoto
-              src={require('../assets/profile.png')}
+              src={require('../assets/son2.png')}
               style={{
                 position: 'absolute',
-                top: 260,
+                top: 290,
                 left: 100,
               }}
             />
             <MembrePhoto
-              src={require('../assets/profile.png')}
+              src={require('../assets/son3.png')}
               style={{
                 position: 'absolute',
-                top: 260,
+                top: 290,
                 left: 187,
               }}
             />
             <MembrePhoto
-              src={require('../assets/profile.png')}
+              src={require('../assets/son04.jpg')}
               style={{
                 position: 'absolute',
-                top: 260,
+                top: 290,
                 left: 274,
               }}
             />
@@ -152,9 +163,27 @@ const styles = StyleSheet.create({
     bottom: 10,
     right: 20
   },
+  smallCircle: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    backgroundColor: colors.secondaryColor,
+    position: 'absolute',
+    bottom: 5,
+    left: 2,
+    borderWidth: 2,
+    borderColor: 'white'
+  },
   treeFamilyContainer: {
     width: '100%',
     flex: 1
+  },
+  treeImage: {
+    position: 'absolute',
+    top: 218,
+    width: 360,
+    height: 160,
+    opacity: 0.1
   }
 })
 

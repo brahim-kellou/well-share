@@ -16,12 +16,12 @@ class NotificationAnniv extends Component {
         <View style={styles.imageContainer}>
           <Image
             style={styles.image}
-            source={require('../../assets/anniv.png')}
+            source={this.props.src}
           />
         </View>
         <View style={styles.textContainer}>
           <Text style={styles.text}>
-            Oussama Bouikken a posté une nouvelle photo dans son album
+            {this.props.text}
           </Text>
         </View>
       </View>
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     height: 100,
     marginVertical: 10,
-    backgroundColor: colors.secondaryColor,
+    backgroundColor: colors.primaryColor,
     borderRadius: 4,
     flexDirection: 'row',
     alignItems: 'center',

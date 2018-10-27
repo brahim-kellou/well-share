@@ -16,7 +16,7 @@ class NotificationPost extends Component {
         <View style={styles.imageContainer}>
           <Image
             style={styles.image}
-            source={require('../../assets/profile.png')}
+            source={this.props.src}
           />
           <View style={styles.cercle}>
             <Icon
@@ -29,7 +29,7 @@ class NotificationPost extends Component {
         </View>
         <View style={styles.textContainer}>
           <Text style={styles.text}>
-            Oussama Bouikken a posté une nouvelle photo dans son album
+            {this.props.text}
           </Text>
         </View>
       </View>

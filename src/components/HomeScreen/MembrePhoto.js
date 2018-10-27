@@ -12,12 +12,14 @@ class MembrePhoto extends Component {
   }
 
   render() {
-    let opacity = 0.3;
-    actif = this.state.actif;
-    actif ? opacity = 1 : null;
+    if (this.state.actif) {
+      color='#ff7675'
+    } else {
+      color='#ffd7d7'
+    }
     return (
       <TouchableOpacity 
-        style={[styles.backCercle, this.props.style]}
+        style={[styles.backCercle, this.props.style, {backgroundColor: color}]}
         onPress={() => {
           this.setState({actif: false})
         }}
@@ -33,14 +35,12 @@ class MembrePhoto extends Component {
 
 const styles = StyleSheet.create({
   backCercle: {
-    width: 74,
-    height: 74,
+    width: 70,
+    height: 70,
     borderRadius: 37,
-    backgroundColor: colors.greyColor,
+    backgroundColor: colors.primaryColor,
     justifyContent: 'center',
     alignItems: 'center',
-    borderWidth: 2,
-    borderColor: colors.secondaryColor
   },
   membreImage: {
     height: 66,

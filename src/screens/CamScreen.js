@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import { Camera, Permissions } from 'expo';
+import { Camera, Permissions, ImagePicker } from 'expo';
 
 import { Icon } from 'react-native-elements';
 
@@ -18,6 +18,19 @@ export default class CamScreen extends React.Component {
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
     this.setState({ hasCameraPermission: status === 'granted' });
   }
+
+  _pickImage = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      allowsEditing: true,
+      aspect: [4, 3],
+    });
+
+    console.log(result);
+
+    if (!result.cancelled) {
+      this.setState({ image: result.uri });
+    }
+  };
 
   render() {
     const { hasCameraPermission } = this.state;
@@ -61,6 +74,7 @@ export default class CamScreen extends React.Component {
                     bottom: 50,
                     left: 40
                   }}
+                  onPress={this._pickImage}
                 >
                   <Icon
                     type='feather'

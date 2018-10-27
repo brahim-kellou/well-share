@@ -19,18 +19,6 @@ class NavBottom extends Component {
         source={require('../../assets/BarBottom.png')}
         style={styles.container}>
         <FAB/>
-        <View style={styles.galleryIcon}> 
-          <TouchableOpacity
-            style={{height: '100%', width: '100%', alignItems: 'center', justifyContent: 'center'}}
-          >
-            <Icon  
-              name='image'
-              type='feather'
-              color={colors.secondaryColor}
-              size={26}
-            />
-          </TouchableOpacity>
-        </View>
       </ImageBackground>
     );
   }
