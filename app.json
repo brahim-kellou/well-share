@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "WellShare",
+    "slug": "my-app",
+    "sdkVersion": "27.0.0",
+    "orientation": "portrait",
+    "android": {
+      "package": "com.dimel.myapp"
+    }
+  }
+}
